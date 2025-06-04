@@ -1,0 +1,118 @@
+.large-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 1%;
+}
+.single-detail-container {
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: solid 2px rgb(64, 100, 230);
+
+  /* box-shadow: -2px -2px 1px rgb(64, 100, 230); */
+  background-color: rgba(20, 74, 251, 0.088);
+
+  box-shadow: 2px -2px 5px rgba(0, 0, 0.2);
+}
+.detail-images-container {
+  display: grid;
+
+  flex: 1;
+  column-gap: 2%;
+  grid-template-columns: 1fr 1fr;
+  background-color: transparent;
+  padding: 2%;
+}
+.detail-images-container > div {
+  height: inherit;
+}
+
+.detail-images {
+  width: 100%;
+  border-radius: 8px;
+  border: solid 2px rgb(64, 100, 230);
+}
+.detail-text {
+  flex: 2;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* padding-left: 2%; */
+}
+.detail-name {
+  border-bottom: 2px solid rgb(64, 100, 230);
+  padding-left: 2%;
+}
+.detail-name > h2 {
+  margin: 5px 0;
+  color: rgb(64, 100, 230);
+}
+.full-details {
+  font-size: 13px;
+  padding-left: 2%;
+}
+.full-details > .major-details {
+  text-decoration: solid;
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+  justify-self: top;
+}
+.detail-price {
+  margin-left: 2%;
+  font-weight: bold;
+  color: red;
+}
+.detail-but {
+  align-self: center;
+  justify-self: flex-end;
+}
+.add-butt {
+  background-color: rgb(64, 100, 230);
+  color: white;
+  font-weight: bold;
+  margin-top: 2px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 5%;
+}
+.add-butt:hover {
+  text-decoration: underline;
+  color: rgb(64, 100, 230);
+  background-color: white;
+  box-shadow: 2px -2px 5px rgba(0, 0, 0.2);
+}
+.add-butt:active {
+  opacity: 0.5;
+}
+
+/* ##### MEDIA SECTION ###### */
+
+@media (max-width: 680px) {
+  .large-detail-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 300px) {
+  .detail-images-container {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .detail-images {
+    border: none;
+  }
+  .primary-image > a > img {
+    border-bottom: solid 2px rgb(64, 100, 230);
+  }
+  .secondary-image > a > img {
+    border-bottom: solid 2px rgb(64, 100, 230);
+    border-top: solid 2px rgb(64, 100, 230);
+  }
+}
